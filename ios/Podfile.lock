@@ -1,0 +1,22 @@
+PODS:
+  - Flutter (1.0.0)
+  - flutter_plugin_scanzy_barcodescanner (1.0.0):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - flutter_plugin_scanzy_barcodescanner (from `.symlinks/plugins/flutter_plugin_scanzy_barcodescanner/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  flutter_plugin_scanzy_barcodescanner:
+    :path: ".symlinks/plugins/flutter_plugin_scanzy_barcodescanner/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
+  flutter_plugin_scanzy_barcodescanner: 89b22b3a5e0ab91300cb03dc15d7bf5c85b7897b
+
+PODFILE CHECKSUM: 8e679eca47255a8ca8067c4c67aab20e64cb974d
+
+COCOAPODS: 1.10.1

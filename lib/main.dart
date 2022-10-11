@@ -6,6 +6,7 @@ import 'package:flutter_plugin_scanzy_barcodescanner/flutter_plugin_scanzy_barco
 
 import 'package:flutter_plugin_scanzy_barcodescanner/scanzy_barcode_options.dart';
 import 'package:flutter_plugin_scanzy_barcodescanner/scanzy_barcode_format.dart';
+import 'package:flutter_plugin_scanzy_barcodescanner/scanzy_barcode_result.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,6 +21,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   String _barcode = '';
+  String _barcodeType = '';
 
   @override
   void initState() {
@@ -29,25 +31,26 @@ class _MyAppState extends State<MyApp> {
 
   Future<void> setScanzyLicense() async {
     try {
-      await ScanzyBarcodescanner.setLicense("lienseKey");
+      await ScanzyBarcodescanner.setLicense("BdyCh9eyxw\$9#k2qX79Z");
       // ignore: empty_catches
     } on PlatformException {}
   }
 
   Future<void> scan() async {
-    String barcode;
+    ScanzyBarcodeResult? barcode;
     try {
       const format = [ScanzyBarcodeFormat.code128, ScanzyBarcodeFormat.ean13];
-      final options = ScanzyBarcodeOptions(format, true, true, true, true);
-      barcode = await ScanzyBarcodescanner.scan(options) ?? '';
+      final options = ScanzyBarcodeOptions(format, true, true, false, false);
+      barcode = await ScanzyBarcodescanner.scan(options);
     } on PlatformException {
-      barcode = '';
+      barcode = null;
     }
 
     if (!mounted) return;
 
     setState(() {
-      _barcode = barcode;
+      _barcode = barcode!.barcode;
+      _barcodeType = barcode.barcodeType;
     });
   }
 
@@ -62,12 +65,12 @@ class _MyAppState extends State<MyApp> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text('scanned barcode: $_barcode\n'),
+              Text('scanned barcode: $_barcode, $_barcodeType\n'),
               TextButton(
                   onPressed: () {
                     scan().then((v) => null);
                   },
-                  child: Text('SCAN'))
+                  child: Text('SCAN HERE'))
             ],
           ),
         ),

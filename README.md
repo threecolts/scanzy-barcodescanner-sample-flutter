@@ -12,7 +12,7 @@ Add the flutter_plugin_scanzy_barcodescanner plugin to your pubspec.yaml file de
 
 ```yaml
 dependencies:
-  flutter_plugin_scanzy_barcodescanner: ^0.0.2
+  flutter_plugin_scanzy_barcodescanner: ^0.0.3
 ```
 Then, run this command on your flutter project:
 ```bash
@@ -44,9 +44,9 @@ Then, insert below code snippet into the place to scan barcode:
    
   //enableVibration: true
   //enableBeep: true
-  //autoZoom: true
-  //scanCropRectOnly: true
-   final options = ScanzyBarcodeOptions(format, true, true, true, true);
+  //enableAutoZoom: true
+  //enableScanCropRectOnly: true
+   final options = ScanzyBarcodeOptions(true, true, true, true, format);
    ScanzyBarcodeResult result = await ScanzyBarcodescanner.scan(options);
 
    print(result.barcode);
@@ -89,21 +89,21 @@ The ScanzyBarcodeOptions is defined as:
 class ScanzyBarcodeOptions {
   bool? enableVibration;
   bool? enableBeep;
-  bool? autoZoom;
-  bool? scanCropRectOnly;
+  bool? enableAutoZoom;
+  bool? enableScanCropRectOnly;
   List<ScanzyBarcodeFormat> formats;
 
-  ScanzyBarcodeOptions(this.formats, this.enableVibration, this.enableBeep,
-      this.autoZoom, this.scanCropRectOnly);
+  ScanzyBarcodeOptions(this.enableVibration, this.enableBeep,
+      this.autoZoom, this.scanCropRectOnly, this.formats);
 }
 ```
 enableVibration: vibrate your phone when barcode detected.<br>
 
 enableBeep: play the beep sound when barcode detected.<br>
 
-autoZoom: the library will zoom in/out automatcially to scan the barcode.<br>
+enableAutoZoom: the library will zoom in/out automatcially to scan the barcode.<br>
 
-scanRectOnly: only scan the view finder area.<br>
+enableScanRectOnly: only scan the view finder area.<br>
 
 formats: the barcode formats.<br>
 

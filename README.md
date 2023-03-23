@@ -12,7 +12,7 @@ Add the flutter_plugin_scanzy_barcodescanner plugin to your pubspec.yaml file de
 
 ```yaml
 dependencies:
-  flutter_plugin_scanzy_barcodescanner: ^0.0.3
+  flutter_plugin_scanzy_barcodescanner: ^0.0.4
 ```
 Then, run this command on your flutter project:
 ```bash

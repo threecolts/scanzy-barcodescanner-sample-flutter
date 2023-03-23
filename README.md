@@ -47,7 +47,7 @@ Then, insert below code snippet into the place to scan barcode:
   //enableAutoZoom: true
   //enableScanCropRectOnly: true
    final options = ScanzyBarcodeOptions(true, true, true, true, format);
-   ScanzyBarcodeResult result = await ScanzyBarcodescanner.scan(options);
+   ScanzyBarcodeResult result = await ScanzyBarcodeManager.scan(options);
 
    print(result.barcode);
    print(result.barcodeType);

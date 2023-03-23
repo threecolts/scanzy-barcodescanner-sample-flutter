@@ -32,7 +32,7 @@ import 'package:flutter_plugin_scanzy_barcodescanner/scanzy_barcode_result.dart'
 Firstly, set the license, it's better to do it in your app's startup, although it's fine to call this function every single time to scan the barcode.
 
 ```dart
-await ScanzyBarcodescanner.setLicense("your-valid-licensekey");
+await ScanzyBarcodeManager.setLicense("your-valid-licensekey");
 ```
 
 Then, insert below code snippet into the place to scan barcode:

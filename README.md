@@ -5,7 +5,7 @@ flutter_plugin_scanzy_barcodescanner implements the barcode capture capabilities
 ## Prerequisites
 
 Flutter is an open source framework by Google for building beautiful, natively compiled, multi-platform applications from a single codebase.
-To setup the development environment and learn more about the Dart programming language, follow the official site [Setup IDE](https://codelabs.developers.google.com/codelabs/flutter-codelab-first#1)
+To set up the development environment and learn more about the Dart programming language, follow the official site [Setup IDE](https://codelabs.developers.google.com/codelabs/flutter-codelab-first#1)
 
 ## Installation
 
@@ -23,7 +23,7 @@ flutter pub get
 ```
 ## Quick Start
 
-To use this plugin, in your project, such as lib/main.dart, import the necessary packages:
+To use this plugin in your project, such as lib/main.dart, import the necessary packages:
 
 ```dart
 import 'package:flutter_plugin_scanzy_barcodescanner/flutter_plugin_scanzy_barcodescanner.dart';
@@ -32,13 +32,13 @@ import 'package:flutter_plugin_scanzy_barcodescanner/scanzy_barcode_format.dart'
 import 'package:flutter_plugin_scanzy_barcodescanner/scanzy_barcode_result.dart';
 ```
 
-Firstly, set the license, it's better to do it in your app's startup, although it's fine to call this function every single time to scan the barcode.
+First, set the license. It's better to do it in your app's startup, but it's fine to call this function every single time a barcode is scanned.
 
 ```dart
 await ScanzyBarcodeManager.setLicense("your-valid-licensekey");
 ```
 
-Then, insert below code snippet into the place to scan barcode:
+Then, insert the below code snippet into the place where you are scanning barcodes:
 
 ```dart
 
@@ -58,7 +58,7 @@ Then, insert below code snippet into the place to scan barcode:
 
 ## API Specification
 
-Below gives you more details about the parameters:
+Below are more details about the parameters:
 
 The definition of ScanzyBarcodeFormat:
 
@@ -83,7 +83,7 @@ enum ScanzyBarcodeFormat {
 }
 
 ```
-Note: to set the formats you only interested, although you can add ALL formats, it definitely would impact the performance.
+Note: Set only the formats you are interested in. You can add ALL formats, but it would impact performance.
 
 
 The ScanzyBarcodeOptions is defined as:
@@ -112,4 +112,4 @@ formats: the barcode formats.<br>
 
 ## Support
 
-if you have any questions or need help, check out our [official website](https://scanzy.com). Get a free trial license to try. It won't take more than one hour to integrate, insanely simple!
+If you have any questions or need help, check out our [official website](https://scanzy.com). Get a free trial license. It takes less than one hour to integrate, and it's insanely simple!

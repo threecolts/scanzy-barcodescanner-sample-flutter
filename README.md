@@ -86,7 +86,7 @@ enum ScanzyBarcodeFormat {
 Note: Set only the formats you are interested in. You can add ALL formats, but it would impact performance.
 
 
-The ScanzyBarcodeOptions is defined as:
+ScanzyBarcodeOptions is defined as:
 
 ```dart
 class ScanzyBarcodeOptions {

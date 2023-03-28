@@ -5,7 +5,7 @@ flutter_plugin_scanzy_barcodescanner implements the barcode capture capabilities
 ## Prerequisites
 
 Flutter is an open source framework by Google for building beautiful, natively compiled, multi-platform applications from a single codebase.
-To set up the development environment and learn more about the Dart programming language, follow the official site [Setup IDE](https://codelabs.developers.google.com/codelabs/flutter-codelab-first#1)
+To set up the development environment and learn more about the Dart programming language, follow the official site at [Setup IDE](https://codelabs.developers.google.com/codelabs/flutter-codelab-first#1).
 
 ## Installation
 

@@ -32,7 +32,7 @@ import 'package:flutter_plugin_scanzy_barcodescanner/scanzy_barcode_format.dart'
 import 'package:flutter_plugin_scanzy_barcodescanner/scanzy_barcode_result.dart';
 ```
 
-First, set the license. It's better to do it in your app's startup, but it's fine to call this function every single time a barcode is scanned.
+First, set the license key you obtained from [Scanzy](https://scanzy.com) for free trial. It's better to do it in your app's startup, although it's fine to call this function every single time a barcode is scanned.
 
 ```dart
 await ScanzyBarcodeManager.setLicense("your-valid-licensekey");
@@ -100,15 +100,13 @@ class ScanzyBarcodeOptions {
       this.autoZoom, this.scanCropRectOnly, this.formats);
 }
 ```
-enableVibration: vibrate your phone when barcode detected.<br>
-
-enableBeep: play the beep sound when barcode detected.<br>
-
-enableAutoZoom: the library will zoom in/out automatcially to scan the barcode.<br>
-
-enableScanRectOnly: only scan the view finder area.<br>
-
-formats: the barcode formats.<br>
+|     Parameter    |   Description         | 
+| ------------- |:-------------:| 
+| enableVibration      | vibrate your phone when a barcode is detected |
+| enableBeep      |   play a beep sound when a barcode is detected    |  
+| enableAutoZoom |   the library will zoom in/out automatcially to scan a barcode    |   
+| enableScanCropRectOnly |   only scan the view finder area    |   
+| formats |   the barcode formats    |  
 
 ## Support
 

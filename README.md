@@ -35,7 +35,7 @@ import 'package:flutter_plugin_scanzy_barcodescanner/scanzy_barcode_format.dart'
 import 'package:flutter_plugin_scanzy_barcodescanner/scanzy_barcode_result.dart';
 ```
 
-First, set the license key you obtained from [Scanzy](https://scanzy.com) for free trial. It's better to do it in your app's startup, although it's fine to call this function every single time a barcode is scanned.
+First, set the license key you obtained from [scanzy.com](https://scanzy.com) for free trial. It's better to do it in your app's startup, although it's fine to call this function every single time a barcode is scanned.
 
 ```dart
 await ScanzyBarcodeManager.setLicense("your-valid-licensekey");

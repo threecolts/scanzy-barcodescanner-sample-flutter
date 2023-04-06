@@ -1,4 +1,4 @@
-# scanzy-barcodescanner-sample-flutter
+# # Scanzy Barcode Scanner SDK Guideline - Flutter
 
 flutter_plugin_scanzy_barcodescanner implements the barcode capture capabilities of the ScanzyBarcodeScannerSDK for iOS and Android. It supports reading a large number of different barcode symbologies, such as Code39, Code93, Code128, Codabar, UPC-A, UPC-E, EAN-8, EAN-13, ITF, QRCode, Aztec, PDF-417, Data Matrix, etc.
 
